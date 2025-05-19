@@ -1,44 +1,59 @@
 const siteConfig = {
-  bride: "Appu",
-  groom: "Amar",
+  bride: "Apuroopa",
+  groom: "Arvind",
   brideFamily: {
     title: "The Bride",
-    name: "Appu",
+    name: "Lakshmi Sita Apuroopa",
     members: [
-      { role: "Parents", names: "Mr. Rajeev Ranjan Sinha & Mrs. Deepa Sinha" },
-      { role: "Sister", names: "Ankita Raj" },
-      { role: "Brother-in-law", names: "Puneet Srivasthava" },
+      {
+        role: "Parents",
+        names: "Mr. Venkata Apparao & Mrs. Pandu Ranga Vital Kumari",
+      },
     ],
   },
   groomFamily: {
     title: "The Groom",
-    name: "Amar",
-    members: [{ role: "Parents", names: "Mr. Debasis Sen & Mrs. Rina Sen" }],
+    name: "Arvind Alias Amarnadh",
+    members: [
+      {
+        role: "Parents",
+        names: "Mr. Bhupathi Rao(Late) & Mrs. Indira(Late)",
+      },
+      {
+        role: "Brother and Sister-In-Law",
+        names: "Mr. Vamsinadh & Mrs. Jaisree",
+      },
+    ],
   },
-  weddingDate: "2025-06-30T15:00:00",
+  weddingDate: "2025-08-16T23:50:00",
   events: [
     {
-      title: "Haldi Ceremony",
-      datetime: "May 22nd, 2025 at 10:30 AM",
-      venue: "Private Residence",
-      address: "248 Lily Ln, Kennett Square, PA - 19348",
-      mapLink:
-        "https://maps.google.com/?q=248+Lily+Ln,+Kennett+Square,+PA+19348",
+      title: "Mehandi & Sangeet",
+      datetime: "Aug 15th, 2025 at 5:00 PM Onwards",
+      venue: "Golden Eagle Ranch",
+      address: "2240 E Blackjack Rd E, Pilot Point, TX - 76258",
+      mapLink: "https://maps.app.goo.gl/v6dFTDY4UZovA4vS6",
     },
     {
-      title: "Sangeet",
-      datetime: "May 23rd, 2025 at 6:00 PM",
-      venue: "Hilton, Exton",
-      address: "720 Eagleview Blvd, E, Exton PA - 19341",
-      mapLink: "https://maps.google.com/?q=Hilton,+Exton,+PA",
+      title: "Haldi",
+      datetime: "Aug 16th, 2025 at 9:00 AM Onwards",
+      venue: "Private Residence",
+      address: "14012 Danesdale Dr, Pilot Point, TX - 76258",
+      mapLink: "https://maps.app.goo.gl/vFSS5hAWzzcqw6V59",
     },
     {
       title: "Wedding Ceremony",
-      datetime: "May 24th, 2025 at 3:00 PM",
+      datetime: "Aug 16th, 2025 at 6:00 PM Onwards",
+      venue: "Golden Eagle Ranch",
+      address: "2240 E Blackjack Rd E, Pilot Point, TX - 76258",
+      mapLink: "https://maps.app.goo.gl/v6dFTDY4UZovA4vS6",
+    },
+    {
+      title: "Satyanarayana Swamy Vratham",
+      datetime: "Aug 17th, 2025 at 10:00 AM Onwards",
       venue: "Private Residence",
-      address: "248 Lily Ln, Kennett Square, PA - 19348",
-      mapLink:
-        "https://maps.google.com/?q=248+Lily+Ln,+Kennett+Square,+PA+19348",
+      address: "14012 Danesdale Dr, Pilot Point, TX - 76258",
+      mapLink: "https://maps.app.goo.gl/vFSS5hAWzzcqw6V59",
     },
   ],
   // this is your Apps Script Web App URL
