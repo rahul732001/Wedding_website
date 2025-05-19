@@ -1,4 +1,3 @@
-// src/components/WeddingEvents.jsx
 import React, { useState } from "react";
 import Modal from "react-modal";
 import {
@@ -17,16 +16,20 @@ export default function WeddingEvents() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState("");
   const [formData, setFormData] = useState({ name: "", guests: 1 });
+  const [isSubmitting, setIsSubmitting] = useState(false); // new state
 
   const openModal = (title) => {
     setSelectedEvent(title);
     setFormData({ name: "", guests: 1 });
     setModalIsOpen(true);
   };
-  const closeModal = () => setModalIsOpen(false);
+  const closeModal = () => {
+    if (!isSubmitting) setModalIsOpen(false);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     const payload = {
       event: selectedEvent,
@@ -37,17 +40,16 @@ export default function WeddingEvents() {
     try {
       await fetch(sheetWebhookUrl, {
         method: "POST",
-        mode: "no-cors", // ← allow sending through CORS barrier
+        mode: "no-cors",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      // we can’t read the response, but we assume it worked:
       alert("RSVP submitted—thank you!");
     } catch (err) {
-      // this should rarely fire now
       console.error("RSVP error:", err);
       alert("Submission failed—please try again.");
     } finally {
+      setIsSubmitting(false);
       setModalIsOpen(false);
     }
   };
@@ -98,7 +100,6 @@ export default function WeddingEvents() {
         </div>
       </div>
 
-      {/* ——— RSVP Modal ——— */}
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -133,17 +134,14 @@ export default function WeddingEvents() {
               required
               onChange={(e) => {
                 const val = e.target.value;
-                // allow clearing the field
                 if (val === "") {
                   setFormData({ ...formData, guests: "" });
                 } else {
-                  // parse and clamp at 1
                   const num = Math.max(1, parseInt(val, 10));
                   setFormData({ ...formData, guests: num });
                 }
               }}
               onBlur={() => {
-                // if left blank or somehow below 1, reset to 1
                 if (!formData.guests || formData.guests < 1) {
                   setFormData({ ...formData, guests: 1 });
                 }
@@ -151,10 +149,19 @@ export default function WeddingEvents() {
             />
 
             <div className="form-buttons">
-              <button type="submit" className="submit-btn">
-                Submit
+              <button
+                type="submit"
+                className="submit-btn"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Submitting..." : "Submit"}
               </button>
-              <button type="button" className="cancel-btn" onClick={closeModal}>
+              <button
+                type="button"
+                className="cancel-btn"
+                onClick={closeModal}
+                disabled={isSubmitting}
+              >
                 Cancel
               </button>
             </div>
