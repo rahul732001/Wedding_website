@@ -1,0 +1,212 @@
+/* WeddingEvents.css */
+.wedding-events {
+  background: linear-gradient(to bottom, #fff5f8, #ffffff);
+  padding: 100px 20px;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+.section-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.event-icon {
+  font-size: 48px;
+  color: #f06292;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+  color: #222;
+}
+.intro-text {
+  font-size: 1.15rem;
+  color: #444;
+  margin-bottom: 48px;
+}
+
+.event-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.event-card {
+  background: #fff;
+  border-radius: 16px;
+  width: 300px;
+  padding: 28px 24px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  text-align: left;
+  transition: transform 0.3s;
+}
+.event-card:hover {
+  transform: translateY(-4px);
+}
+.event-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  color: #222;
+}
+.event-detail {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.event-detail .icon {
+  color: #f06292;
+  margin-top: 4px;
+}
+.location strong {
+  display: block;
+}
+.location p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+.rsvp-btn {
+  flex: 1;
+  background: #f06292;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.nav-btn {
+  background: #f0f0f0;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* ——— RSVP Modal CSS ——— */
+/* Overlay dimming */
+.rsvp-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* The white card */
+.rsvp-modal {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  font-family: "Playfair Display", serif;
+  color: #333;
+  outline: none;
+}
+
+/* Close button (“×”) */
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Header */
+.rsvp-content h2 {
+  margin: 0 0 24px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  color: #222;
+}
+
+/* Labels */
+.rsvp-content label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Inputs */
+.rsvp-content input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  color: #222;
+  box-sizing: border-box;
+}
+.rsvp-content input[type="number"]::-webkit-inner-spin-button,
+.rsvp-content input[type="number"]::-webkit-outer-spin-button {
+  /* preserve the default appearance */
+  -webkit-appearance: inner-spin-button;
+  appearance: inner-spin-button;
+  /* invert the light arrow to dark */
+  filter: invert(100%);
+}
+
+/* In Firefox, force the input text & arrows to use the text color */
+.rsvp-content input[type="number"] {
+  color: #222; /* black text and spinner */
+  -moz-appearance: textfield; /* show spinner in modern FF */
+}
+
+/* Button row */
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Submit */
+.submit-btn {
+  flex: 1;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Cancel */
+.cancel-btn {
+  flex: 1;
+  background: #f4f4f4;
+  color: #333;
+  border: none;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}

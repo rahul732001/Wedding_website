@@ -1,0 +1,57 @@
+.save-the-date {
+  background: linear-gradient(to bottom, #ffeef3, #ffffff);
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 1px solid #f8d8df;
+  box-shadow: inset 0 -5px 10px rgba(255, 192, 203, 0.1);
+  font-family: "Playfair Display", serif;
+}
+
+.save-the-date .section-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.save-the-date .icon {
+  font-size: 64px;
+  color: #f06292;
+  margin-bottom: 28px;
+}
+
+.save-the-date h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1e1e1e;
+  letter-spacing: 0.5px;
+}
+
+.save-the-date p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #444;
+  margin: 0 auto;
+  max-width: 640px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .save-the-date {
+    padding: 60px 20px;
+  }
+
+  .save-the-date .icon {
+    font-size: 46px;
+  }
+
+  .save-the-date h2 {
+    font-size: 2.2rem;
+  }
+
+  .save-the-date p {
+    font-size: 1.1rem;
+  }
+}
