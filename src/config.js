@@ -3,7 +3,7 @@ const siteConfig = {
   groom: "Amar",
   brideFamily: {
     title: "The Bride",
-    name: "Amrita Raj",
+    name: "Appu",
     members: [
       { role: "Parents", names: "Mr. Rajeev Ranjan Sinha & Mrs. Deepa Sinha" },
       { role: "Sister", names: "Ankita Raj" },
@@ -12,7 +12,7 @@ const siteConfig = {
   },
   groomFamily: {
     title: "The Groom",
-    name: "Sourav Sen",
+    name: "Amar",
     members: [{ role: "Parents", names: "Mr. Debasis Sen & Mrs. Rina Sen" }],
   },
   weddingDate: "2025-06-30T15:00:00",
