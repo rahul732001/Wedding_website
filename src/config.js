@@ -59,7 +59,8 @@ const siteConfig = {
   // this is your Apps Script Web App URL
   sheetWebhookUrl:
     "https://script.google.com/macros/s/AKfycbxyv-Cq3VKPP_yQ0qnV34e_GXSd08nj4M7-CCTwyBBGZ6dV4RG1cL6dK0SZImIcOYPnNw/exec",
-  tagline: "We can’t wait to celebrate with you!",
+  tagline:
+    "We can’t wait to celebrate with you. When two souls are meant to be together, nothing can keep them apart!",
 };
 
 export default siteConfig;
