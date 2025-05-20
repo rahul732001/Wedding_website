@@ -1,7 +1,9 @@
 .our-families {
-  padding: 100px 20px;
-  background-color: #fff5f8;
+  background: linear-gradient(to bottom, #ffeef3, #ffffff);
+  padding: 80px 20px;
   text-align: center;
+  border-bottom: 1px solid #f8d8df;
+  box-shadow: inset 0 -5px 10px rgba(255, 192, 203, 0.1);
   font-family: "Playfair Display", serif;
 }
 
