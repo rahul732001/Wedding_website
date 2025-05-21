@@ -1,8 +1,20 @@
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Playfair Display", serif;
   background-color: #fff0f5;
   color: #444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 100px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .container {

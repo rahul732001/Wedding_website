@@ -76,4 +76,70 @@ button:focus-visible {
     padding: 0 20px;
     text-align: center;
   }
+  /* GLOBAL RESPONSIVE LAYOUT FIXES */
+  body {
+    overflow-x: hidden;
+    font-family: "Playfair Display", serif;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+  }
+
+  /* Ensure section content is centered */
+  .section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  /* Prevent content from overflowing on small screens */
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Typography for mobile */
+  h1,
+  h2,
+  h3 {
+    line-height: 1.3;
+  }
+
+  @media screen and (max-width: 768px) {
+    h1,
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    .family-card,
+    .event-card {
+      width: 90%;
+      padding: 24px;
+      margin: 0 auto;
+    }
+
+    .family-cards,
+    .event-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .couple-names-wrapper {
+      flex-direction: column;
+      gap: 10px;
+      font-size: 2rem;
+    }
+
+    .rsvp-modal {
+      width: 90% !important;
+      padding: 20px;
+    }
+  }
 }
