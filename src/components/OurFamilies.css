@@ -1,18 +1,33 @@
 .our-families {
-  background: linear-gradient(to bottom, #ffeef3, #ffffff);
-  padding: 80px 20px;
+  background-image: url("/peacock-mandala.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 140px 20px;
   text-align: center;
-  border-bottom: 1px solid #f8d8df;
-  box-shadow: inset 0 -5px 10px rgba(255, 192, 203, 0.1);
   font-family: "Playfair Display", serif;
+  position: relative;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.our-families::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
 .our-families h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 60px;
-  color: #1e1e1e;
-  letter-spacing: 1px;
+  font-size: 3.8rem;
+  font-weight: 800;
+  margin-bottom: 80px;
+  color: #ffe600;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  position: relative;
 }
 
 .family-cards {
@@ -20,81 +35,98 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .family-card {
-  background-color: #fff0f5;
-  border-radius: 16px;
-  padding: 36px 40px;
-  max-width: 340px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
   text-align: center;
-  transition: transform 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s ease;
 }
 
 .family-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-10px);
 }
 
 .family-card h3.title {
   font-size: 1.8rem;
-  color: #e91e63;
+  color: #ff4081;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .family-card h4 {
   font-size: 1.4rem;
-  font-weight: 600;
-  margin: 12px 0 24px;
-  color: #222;
-}
-
-.family-card p {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  margin: 6px 0;
-  color: #444;
-  font-family: "Playfair Display", serif;
-}
-
-/* Explicit role and name styling */
-.family-member .name {
-  display: block;
+  font-weight: 700;
+  color: #ffe600;
+  margin-bottom: 20px;
+  font-family: "Georgia", serif;
 }
 
 .family-member {
-  margin-bottom: 16px;
-  text-align: center;
+  margin-bottom: 20px;
 }
 
 .family-member .role {
-  font-weight: 700; /* Bolder than the title */
-  color: #1e1e1e;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
   margin-bottom: 4px;
 }
 
 .family-member .name {
-  font-weight: 400;
-  color: #555;
   font-size: 1rem;
+  color: #f9f9f9;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
-/* Responsive tweaks */
+/* Divider */
+.family-member:not(:last-child)::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 14px auto 0;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
 @media screen and (max-width: 768px) {
   .family-cards {
     flex-direction: column;
-    gap: 24px;
-  }
-
-  .family-card {
-    max-width: 100%;
-    padding: 28px;
+    align-items: center;
   }
 
   .our-families h2 {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
+  }
+
+  .family-card {
+    padding: 32px 20px;
   }
 
   .family-card h3.title {
@@ -103,9 +135,5 @@
 
   .family-card h4 {
     font-size: 1.2rem;
-  }
-
-  .family-card p {
-    font-size: 1rem;
   }
 }

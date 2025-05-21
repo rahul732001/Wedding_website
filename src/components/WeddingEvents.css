@@ -1,33 +1,58 @@
-/* WeddingEvents.css */
 .wedding-events {
-  background: linear-gradient(to bottom, #fff5f8, #ffffff);
-  padding: 100px 20px;
-  font-family: "Playfair Display", serif;
+  background-image: url("/south-indian-decor.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 140px 20px;
   text-align: center;
+  font-family: "Playfair Display", serif;
+  position: relative;
+  color: #fff;
 }
 
-.section-content {
-  max-width: 900px;
-  margin: auto;
+.wedding-events::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
 }
 
+.wedding-events * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header Icon */
 .event-icon {
-  font-size: 48px;
-  color: #f06292;
+  font-size: 60px;
+  color: #ff4081;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Section Title */
+.wedding-events h2 {
+  font-size: 3.6rem;
+  color: #ffe600;
+  font-weight: 700;
+  letter-spacing: 1.5px;
   margin-bottom: 16px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-h2 {
-  font-size: 2.8rem;
-  margin-bottom: 12px;
-  color: #222;
-}
+/* Subtitle */
 .intro-text {
-  font-size: 1.15rem;
-  color: #444;
+  font-size: 1.3rem;
+  color: #f9f9f9;
   margin-bottom: 48px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
 }
 
+/* Events Layout */
 .event-cards {
   display: flex;
   flex-wrap: wrap;
@@ -35,50 +60,64 @@ h2 {
   gap: 32px;
 }
 
+/* Individual Event Card */
 .event-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
+  padding: 30px 24px;
   width: 300px;
-  padding: 28px 24px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
   text-align: left;
-  transition: transform 0.3s;
+  animation: fadeInUp 0.6s ease forwards;
 }
+
 .event-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
+
 .event-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-bottom: 16px;
-  color: #222;
+  color: #ffe600;
+  font-weight: 600;
 }
+
 .event-detail {
   display: flex;
   gap: 12px;
   align-items: flex-start;
   margin-bottom: 16px;
 }
+
 .event-detail .icon {
-  color: #f06292;
+  color: #ff4081;
   margin-top: 4px;
 }
+
 .location strong {
   display: block;
+  font-weight: 600;
+  color: #fff;
 }
+
 .location p {
   margin: 0;
   font-size: 0.95rem;
-  color: #555;
+  color: #eaeaea;
 }
 
+/* Buttons */
 .buttons {
   display: flex;
   gap: 12px;
   margin-top: 24px;
 }
+
 .rsvp-btn {
   flex: 1;
-  background: #f06292;
+  background: #ff4081;
   color: white;
   border: none;
   padding: 10px 0;
@@ -86,8 +125,9 @@ h2 {
   font-weight: 600;
   cursor: pointer;
 }
+
 .nav-btn {
-  background: #f0f0f0;
+  background: #fff;
   border: none;
   padding: 10px;
   border-radius: 10px;
@@ -95,118 +135,45 @@ h2 {
   cursor: pointer;
 }
 
-/* ——— RSVP Modal CSS ——— */
-/* Overlay dimming */
-.rsvp-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
-/* The white card */
-.rsvp-modal {
-  position: relative;
-  background: #fff;
-  border-radius: 16px;
-  padding: 32px 24px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  font-family: "Playfair Display", serif;
-  color: #333;
-  outline: none;
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Close button (“×”) */
-.close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  color: #666;
-  cursor: pointer;
-}
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .event-cards {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* Header */
-.rsvp-content h2 {
-  margin: 0 0 24px;
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-align: center;
-  color: #222;
-}
+  .wedding-events h2 {
+    font-size: 2.6rem;
+  }
 
-/* Labels */
-.rsvp-content label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #444;
-}
-
-/* Inputs */
-.rsvp-content input {
-  width: 100%;
-  padding: 10px 14px;
-  margin-bottom: 16px;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #fafafa;
-  color: #222;
-  box-sizing: border-box;
-}
-.rsvp-content input[type="number"]::-webkit-inner-spin-button,
-.rsvp-content input[type="number"]::-webkit-outer-spin-button {
-  /* preserve the default appearance */
-  -webkit-appearance: inner-spin-button;
-  appearance: inner-spin-button;
-  /* invert the light arrow to dark */
-  filter: invert(100%);
-}
-
-/* In Firefox, force the input text & arrows to use the text color */
-.rsvp-content input[type="number"] {
-  color: #222; /* black text and spinner */
-  -moz-appearance: textfield; /* show spinner in modern FF */
-}
-
-/* Button row */
-.form-buttons {
-  display: flex;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-/* Submit */
-.submit-btn {
-  flex: 1;
-  background: #e91e63;
-  color: #fff;
-  border: none;
-  padding: 12px 0;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* Cancel */
-.cancel-btn {
-  flex: 1;
-  background: #f4f4f4;
-  color: #333;
-  border: none;
-  padding: 12px 0;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
+  .intro-text {
+    font-size: 1.1rem;
+  }
 }

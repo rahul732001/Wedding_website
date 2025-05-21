@@ -1,57 +1,83 @@
 .save-the-date {
-  background: linear-gradient(to bottom, #ffeef3, #ffffff);
-  padding: 80px 20px;
+  background-image: url("/golden-mandap.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 160px 20px;
   text-align: center;
-  border-bottom: 1px solid #f8d8df;
-  box-shadow: inset 0 -5px 10px rgba(255, 192, 203, 0.1);
   font-family: "Playfair Display", serif;
+  position: relative;
+  color: #fff;
 }
 
-.save-the-date .section-content {
+.save-the-date::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* soft shade */
+  z-index: 0;
+}
+
+.save-the-date * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Icon */
+.save-the-date .icon {
+  font-size: 60px;
+  color: #ff4081;
+  margin-bottom: 24px;
+  animation: floatIcon 2s ease-in-out infinite;
+}
+
+/* Heading */
+.save-the-date h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffd700; /* royal gold */
+  margin-bottom: 24px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  font-family: "Cinzel Decorative", serif;
+  letter-spacing: 2px;
+}
+
+/* Text */
+.save-the-date p {
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #fdfdfd;
   max-width: 720px;
   margin: 0 auto;
+  font-family: "Cormorant Garamond", serif;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
   padding: 0 20px;
 }
 
-.save-the-date .icon {
-  font-size: 64px;
-  color: #f06292;
-  margin-bottom: 28px;
+/* Icon Animation */
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-.save-the-date h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 24px;
-  color: #1e1e1e;
-  letter-spacing: 0.5px;
-}
-
-.save-the-date p {
-  font-size: 1.4rem;
-  line-height: 1.8;
-  color: #444;
-  margin: 0 auto;
-  max-width: 640px;
-  font-weight: 400;
-  letter-spacing: 0.3px;
-}
-
-/* Responsive adjustments */
+/* Responsive */
 @media screen and (max-width: 600px) {
   .save-the-date {
-    padding: 60px 20px;
-  }
-
-  .save-the-date .icon {
-    font-size: 46px;
+    padding: 100px 20px;
   }
 
   .save-the-date h2 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
 
   .save-the-date p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }

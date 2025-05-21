@@ -3,7 +3,7 @@ const siteConfig = {
   groom: "Arvind",
   brideFamily: {
     title: "The Bride",
-    name: "Lakshmi Sita Apuroopa",
+    name: "Devarasetty Lakshmi Sita Apuroopa",
     members: [
       {
         role: "Parents",
@@ -14,7 +14,7 @@ const siteConfig = {
   },
   groomFamily: {
     title: "The Groom",
-    name: "Arvind Alias Amarnadh",
+    name: "Machavarapu Arvind",
     members: [
       {
         role: "Parents",
