@@ -7,7 +7,8 @@ const siteConfig = {
     members: [
       {
         role: "Parents",
-        names: "Mr. Venkata Apparao & Mrs. Pandu Ranga Vital Kumari",
+        name1: "Mr. Devarasetty Venkata Apparao",
+        name2: " Mrs. Pandu Ranga Vital Kumari",
       },
     ],
   },
@@ -17,11 +18,13 @@ const siteConfig = {
     members: [
       {
         role: "Parents",
-        names: "Mr. Bhupathi Rao(Late) & Mrs. Indira(Late)",
+        name1: "Mr. Machavarapu Bhupathi Rao(Late)",
+        name2: "Mrs. Indira(Late)",
       },
       {
         role: "Brother and Sister-In-Law",
-        names: "Mr. Vamsinadh & Mrs. Jaisree",
+        name1: "Mr.Machavarapu Vamsinadh",
+        name2: "Mrs. Jaisree",
       },
     ],
   },
@@ -60,7 +63,8 @@ const siteConfig = {
   sheetWebhookUrl:
     "https://script.google.com/macros/s/AKfycbxyv-Cq3VKPP_yQ0qnV34e_GXSd08nj4M7-CCTwyBBGZ6dV4RG1cL6dK0SZImIcOYPnNw/exec",
   tagline:
-    "We can’t wait to celebrate with you. When two souls are meant to be together, nothing can keep them apart!",
+    '"When two souls are meant to be together, nothing can keep them apart"',
+  tagline2: "We can’t wait to celebrate with you!",
 };
 
 export default siteConfig;

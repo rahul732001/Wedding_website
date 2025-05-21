@@ -60,7 +60,7 @@ export default function WeddingEvents() {
         <FaMapMarkerAlt className="event-icon" />
         <h2>Wedding Events</h2>
         <p className="intro-text">
-          We've planned three beautiful ceremonies to celebrate our union. We
+          We've planned four beautiful ceremonies to celebrate our union. We
           would be honored to have you join us for these special moments.
         </p>
 

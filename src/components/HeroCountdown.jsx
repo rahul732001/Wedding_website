@@ -35,9 +35,11 @@ export default function HeroCountdown() {
       <div className="overlay">
         <div className="section-content">
           <h3>THE WEDDING OF</h3>
+          <h1>{bride}</h1>
           <h1>
-            {bride} <span>&</span> {groom}
+            <span>&</span>
           </h1>
+          <h1> {groom}</h1>
           <h4>
             {new Date(weddingDate).toLocaleDateString(undefined, {
               year: "numeric",
