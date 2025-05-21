@@ -13,7 +13,7 @@ export default function OurFamilies() {
         <div key={index} className="family-member">
           <p className="role">{member.role}</p>
           <p className="name">{member.name1}</p>
-          <p className="name"> & </p>
+          <p className="name">&</p>
           <p className="name">{member.name2}</p>
         </div>
       ))}

@@ -59,6 +59,10 @@
 }
 
 /* Explicit role and name styling */
+.family-member .name {
+  display: block;
+}
+
 .family-member {
   margin-bottom: 16px;
   text-align: center;

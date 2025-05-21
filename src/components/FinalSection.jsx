@@ -19,8 +19,10 @@ export default function FinalSection() {
         <span className="name">{groom}</span>
       </h2>
       <h4 className="wedding-date">{formattedDate}</h4>
-      <p className="tagline">{tagline}</p>
-      <p className="tagline">{tagline2}</p>
+      <div className="tagline-wrapper">
+        <p className="tagline">{tagline}</p>
+        <p className="tagline">{tagline2}</p>
+      </div>
     </section>
   );
 }
